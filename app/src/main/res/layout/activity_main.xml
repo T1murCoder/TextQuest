@@ -49,13 +49,17 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#4CAF50" />
+            android:backgroundTint="#4CAF50"
+            android:text="Да"
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/btn_second"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#D32F2F" />
+            android:backgroundTint="#D32F2F"
+            android:text="Нет"
+            android:textSize="40sp" />
     </LinearLayout>
 </LinearLayout>
