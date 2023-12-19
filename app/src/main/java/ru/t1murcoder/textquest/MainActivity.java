@@ -12,8 +12,8 @@ import ru.t1murcoder.textquest.domain.Country;
 import ru.t1murcoder.textquest.service.Story;
 
 public class MainActivity extends AppCompatActivity {
-    public static Country country;
-    public static Story story;
+    public static Country country = new Country();
+    public static Story story = new Story();
     private ActivityMainBinding binding;
 
     @Override
@@ -22,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        country = new Country();
-        story = new Story();
+//        country = new Country();
+//        story = new Story();
 
         country.Happiness += story.current_situation.dHappiness;
         country.Population += story.current_situation.dPopulation;
         country.Money += story.current_situation.dMoney;
 
-        binding.tvHappiness.setText(country.Happiness);
-        binding.tvPopulation.setText(country.Population);
-        binding.tvMoney.setText(country.Money);
+        binding.tvHappiness.setText(String.valueOf(country.Happiness));
+        binding.tvPopulation.setText(String.valueOf(country.Population));
+        binding.tvMoney.setText(String.valueOf(country.Money));
 
         binding.tvSituation.setText(story.current_situation.text);
 
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 country.Population += story.current_situation.dPopulation;
                 country.Money += story.current_situation.dMoney;
 
-                binding.tvHappiness.setText(country.Happiness);
-                binding.tvPopulation.setText(country.Population);
-                binding.tvMoney.setText(country.Money);
+                binding.tvHappiness.setText(String.valueOf(country.Happiness));
+                binding.tvPopulation.setText(String.valueOf(country.Population));
+                binding.tvMoney.setText(String.valueOf(country.Money));
 
                 binding.tvSituation.setText(story.current_situation.text);
 

@@ -1,9 +1,9 @@
 package ru.t1murcoder.textquest.domain;
 
 public class Country {
-    public int Happiness;
-    public int Population;
-    public int Money;
+    public int Happiness = 100;
+    public int Population = 100;
+    public int Money = 100;
 
     public Country() {
         Happiness = 100;
