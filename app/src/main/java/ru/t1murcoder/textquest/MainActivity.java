@@ -45,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
             if (story.isEnd()) {
                 Toast.makeText(MainActivity.this, "Story is end!", Toast.LENGTH_SHORT).show();
             } else {
+
+                if (((Button) view).getText().toString().equals("Да")) {
+                    story.go(1);
+                } else {
+                    story.go(2);
+                }
+
                 country.Happiness += story.current_situation.dHappiness;
                 country.Population += story.current_situation.dPopulation;
                 country.Money += story.current_situation.dMoney;
@@ -56,11 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.tvSituation.setText(story.current_situation.text);
 
 
-                if (((Button) view).getText().toString().equals("Да")) {
-                    story.go(1);
-                } else {
-                    story.go(2);
-                }
+
             }
         }
     }
