@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         country.Population += story.current_situation.dPopulation;
         country.Money += story.current_situation.dMoney;
 
-        binding.tvHappiness.setText(String.valueOf(country.Happiness));
-        binding.tvPopulation.setText(String.valueOf(country.Population));
-        binding.tvMoney.setText(String.valueOf(country.Money));
+        binding.tvHappiness.setText("Happiness:" + String.valueOf(country.Happiness));
+        binding.tvPopulation.setText("Population:" + String.valueOf(country.Population));
+        binding.tvMoney.setText("Money:" + String.valueOf(country.Money));
 
         binding.tvSituation.setText(story.current_situation.text);
 
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 country.Population += story.current_situation.dPopulation;
                 country.Money += story.current_situation.dMoney;
 
-                binding.tvHappiness.setText(String.valueOf(country.Happiness));
-                binding.tvPopulation.setText(String.valueOf(country.Population));
-                binding.tvMoney.setText(String.valueOf(country.Money));
+                binding.tvHappiness.setText("Happiness:" + String.valueOf(country.Happiness));
+                binding.tvPopulation.setText("Population:" + String.valueOf(country.Population));
+                binding.tvMoney.setText("Money:" + String.valueOf(country.Money));
 
                 binding.tvSituation.setText(story.current_situation.text);
 
